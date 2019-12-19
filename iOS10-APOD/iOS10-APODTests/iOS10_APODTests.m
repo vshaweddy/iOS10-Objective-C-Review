@@ -8,30 +8,38 @@
 
 #import <XCTest/XCTest.h>
 
+NSData *loadFile(NSString *filename, NSBundle *bundle) {
+	NSString *basename = [filename stringByDeletingPathExtension];
+	NSString *extension = [filename pathExtension];
+	
+	NSString *path = [bundle pathForResource:basename ofType:extension];
+	NSData *data = [NSData dataWithContentsOfFile:path];
+	return data;
+}
+
 @interface iOS10_APODTests : XCTestCase
 
 @end
 
 @implementation iOS10_APODTests
 
-- (void)setUp {
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+- (void)testPhotoJSON {
+	
+	NSBundle *testBundle = [NSBundle bundleForClass:[self class]];
+	NSData *jsonPhotoData = loadFile(@"Photo.json", testBundle);
+	
+	NSError *error = nil;
+	NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:jsonPhotoData options:0 error:&error];
+	
+	if (error) {
+//		NSLog(@"Error: %@", error);
+		XCTFail(@"Error: %@", error);
+	}
+	
+	NSLog(@"JSON: %@", dictionary);
+	// TODO: Parse the JSON dictionary
+	
 }
 
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-}
-
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
-}
-
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
-}
 
 @end
