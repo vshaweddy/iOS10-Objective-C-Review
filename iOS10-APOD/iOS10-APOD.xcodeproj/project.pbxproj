@@ -18,6 +18,8 @@
 		BD00DF6923ABF4FA007B6318 /* LSIImageOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = BD00DF6823ABF4FA007B6318 /* LSIImageOperation.m */; };
 		BD202F9A23ABFCE5007C5388 /* December2019.json in Resources */ = {isa = PBXBuildFile; fileRef = BD202F9923ABFCE5007C5388 /* December2019.json */; };
 		BD202F9C23ABFD2D007C5388 /* Photo.json in Resources */ = {isa = PBXBuildFile; fileRef = BD202F9B23ABFD2D007C5388 /* Photo.json */; };
+		BD202F9F23ABFF42007C5388 /* LSIPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = BD202F9E23ABFF42007C5388 /* LSIPhoto.m */; };
+		BD202FA023ABFF42007C5388 /* LSIPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = BD202F9E23ABFF42007C5388 /* LSIPhoto.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		BD00DF6823ABF4FA007B6318 /* LSIImageOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIImageOperation.m; sourceTree = "<group>"; };
 		BD202F9923ABFCE5007C5388 /* December2019.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = December2019.json; sourceTree = "<group>"; };
 		BD202F9B23ABFD2D007C5388 /* Photo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Photo.json; sourceTree = "<group>"; };
+		BD202F9D23ABFF42007C5388 /* LSIPhoto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIPhoto.h; sourceTree = "<group>"; };
+		BD202F9E23ABFF42007C5388 /* LSIPhoto.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIPhoto.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 				BD00DF4723ABF3B6007B6318 /* ViewController.m */,
 				BD00DF6723ABF4FA007B6318 /* LSIImageOperation.h */,
 				BD00DF6823ABF4FA007B6318 /* LSIImageOperation.m */,
+				BD202F9D23ABFF42007C5388 /* LSIPhoto.h */,
+				BD202F9E23ABFF42007C5388 /* LSIPhoto.m */,
 				BD00DF4923ABF3B6007B6318 /* Main.storyboard */,
 				BD00DF4C23ABF3B8007B6318 /* Assets.xcassets */,
 				BD00DF4E23ABF3B8007B6318 /* LaunchScreen.storyboard */,
@@ -224,6 +230,7 @@
 				BD00DF4823ABF3B6007B6318 /* ViewController.m in Sources */,
 				BD00DF4223ABF3B6007B6318 /* AppDelegate.m in Sources */,
 				BD00DF6923ABF4FA007B6318 /* LSIImageOperation.m in Sources */,
+				BD202F9F23ABFF42007C5388 /* LSIPhoto.m in Sources */,
 				BD00DF5323ABF3B8007B6318 /* main.m in Sources */,
 				BD00DF4523ABF3B6007B6318 /* SceneDelegate.m in Sources */,
 			);
@@ -234,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD00DF5D23ABF3B8007B6318 /* iOS10_APODTests.m in Sources */,
+				BD202FA023ABFF42007C5388 /* LSIPhoto.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

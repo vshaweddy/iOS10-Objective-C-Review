@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "LSIPhoto.h"
 
 NSData *loadFile(NSString *filename, NSBundle *bundle) {
 	NSString *basename = [filename stringByDeletingPathExtension];
@@ -39,6 +40,17 @@ NSData *loadFile(NSString *filename, NSBundle *bundle) {
 	NSLog(@"JSON: %@", dictionary);
 	// TODO: Parse the JSON dictionary
 	
+	
+//	"title": "Starburst Galaxy M94 from Hubble",
+//	"url": "https://apod.nasa.gov/apod/image/1912/M94_Hubble_960.jpg"
+	
+	NSURL *expectedURL = [NSURL URLWithString:@"https://apod.nasa.gov/apod/image/1912/M94_Hubble_960.jpg"];
+
+
+	LSIPhoto *photo = [[LSIPhoto alloc] initWithDictionary: dictionary];
+	
+	XCTAssertEqualObjects(expectedURL, photo.url);
+	XCTAssertEqualObjects(@"Starburst Galaxy M94 from Hubble", photo.title);
 }
 
 
