@@ -15,6 +15,7 @@
 		BD00DF5023ABF3B8007B6318 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD00DF4E23ABF3B8007B6318 /* LaunchScreen.storyboard */; };
 		BD00DF5323ABF3B8007B6318 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BD00DF5223ABF3B8007B6318 /* main.m */; };
 		BD00DF5D23ABF3B8007B6318 /* iOS10_APODTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD00DF5C23ABF3B8007B6318 /* iOS10_APODTests.m */; };
+		BD00DF6923ABF4FA007B6318 /* LSIImageOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = BD00DF6823ABF4FA007B6318 /* LSIImageOperation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 		BD00DF5823ABF3B8007B6318 /* iOS10-APODTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS10-APODTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD00DF5C23ABF3B8007B6318 /* iOS10_APODTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOS10_APODTests.m; sourceTree = "<group>"; };
 		BD00DF5E23ABF3B8007B6318 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD00DF6723ABF4FA007B6318 /* LSIImageOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIImageOperation.h; sourceTree = "<group>"; };
+		BD00DF6823ABF4FA007B6318 /* LSIImageOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIImageOperation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +93,8 @@
 				BD00DF4423ABF3B6007B6318 /* SceneDelegate.m */,
 				BD00DF4623ABF3B6007B6318 /* ViewController.h */,
 				BD00DF4723ABF3B6007B6318 /* ViewController.m */,
+				BD00DF6723ABF4FA007B6318 /* LSIImageOperation.h */,
+				BD00DF6823ABF4FA007B6318 /* LSIImageOperation.m */,
 				BD00DF4923ABF3B6007B6318 /* Main.storyboard */,
 				BD00DF4C23ABF3B8007B6318 /* Assets.xcassets */,
 				BD00DF4E23ABF3B8007B6318 /* LaunchScreen.storyboard */,
@@ -210,6 +215,7 @@
 			files = (
 				BD00DF4823ABF3B6007B6318 /* ViewController.m in Sources */,
 				BD00DF4223ABF3B6007B6318 /* AppDelegate.m in Sources */,
+				BD00DF6923ABF4FA007B6318 /* LSIImageOperation.m in Sources */,
 				BD00DF5323ABF3B8007B6318 /* main.m in Sources */,
 				BD00DF4523ABF3B6007B6318 /* SceneDelegate.m in Sources */,
 			);

@@ -7,8 +7,12 @@
 //
 
 #import "ViewController.h"
+#import "LSIImageOperation.h"
 
 @interface ViewController ()
+@property (strong, nonatomic) IBOutlet UIImageView *imageView;
+
+@property (nonatomic) NSOperationQueue *imageQueue;
 
 @end
 
@@ -16,8 +20,19 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-	// Do any additional setup after loading the view.
-}
 
+	// TODO: Move this to init
+	_imageQueue = [[NSOperationQueue alloc] init];
+	
+	
+	// Download image
+	NSURL *url = [NSURL URLWithString:@"https://apod.nasa.gov/apod/image/1912/AS17-149-22859-2v2SmlWmk1024.jpg"];
+	
+	
+	LSIImageOperation *imageOperation = [[LSIImageOperation alloc] initWithImageURL:url];
+	
+	[self.imageQueue addOperation:imageOperation];
+	
+}
 
 @end
