@@ -17,13 +17,20 @@
 		
 		// try to find all values
 		NSString *title = dictionary[@"title"];
-		NSString *stringURL = dictionary[@"url"];
-		NSURL *url = [NSURL URLWithString:stringURL];
+		NSString *urlString = dictionary[@"url"];
+		NSString *hdURLString = dictionary[@"hdurl"];
+		NSString *explanation = dictionary[@"explanation"];
+		NSDate *date = dictionary[@"date"];
+		NSString *copyright = dictionary[@"copyright"];
 		
 		// try to construct (potentially return nil if missing fields)
-		if (title && url) {
+		if (title && urlString && hdURLString && explanation && date && copyright) {
 			_title = title;
-			_url = url;
+			_url = [NSURL URLWithString:urlString];
+			_hdURL = [NSURL URLWithString:hdURLString];
+			_explanation = explanation;
+//			_date = NSDate
+			_copyright = copyright;
 		}
 		
 	}
