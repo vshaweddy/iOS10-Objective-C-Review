@@ -31,8 +31,19 @@
 	
 	LSIImageOperation *imageOperation = [[LSIImageOperation alloc] initWithImageURL:url];
 	
+	
+	NSBlockOperation *updateUI = [NSBlockOperation blockOperationWithBlock:^{
+		NSLog(@"Update the UI");
+		self.imageView.image = imageOperation.image;
+	}];
+
+	[updateUI addDependency:imageOperation];
+	
 	[self.imageQueue addOperation:imageOperation];
+	[[NSOperationQueue mainQueue] addOperation:updateUI];
 	
 }
+
+
 
 @end
