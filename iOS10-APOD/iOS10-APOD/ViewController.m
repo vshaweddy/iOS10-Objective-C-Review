@@ -28,9 +28,11 @@
 	// Download image
 	NSURL *url = [NSURL URLWithString:@"https://apod.nasa.gov/apod/image/1912/AS17-149-22859-2v2SmlWmk1024.jpg"];
 	
-	
-	LSIImageOperation *imageOperation = [[LSIImageOperation alloc] initWithImageURL:url];
-	
+	[self downloadImageURL:url];
+}
+
+- (void)downloadImageURL:(NSURL *)imageURL {
+	LSIImageOperation *imageOperation = [[LSIImageOperation alloc] initWithImageURL:imageURL];
 	
 	NSBlockOperation *updateUI = [NSBlockOperation blockOperationWithBlock:^{
 		NSLog(@"Update the UI");
@@ -41,7 +43,6 @@
 	
 	[self.imageQueue addOperation:imageOperation];
 	[[NSOperationQueue mainQueue] addOperation:updateUI];
-	
 }
 
 
